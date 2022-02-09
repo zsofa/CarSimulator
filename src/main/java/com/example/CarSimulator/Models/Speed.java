@@ -4,12 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
-@AllArgsConstructor
-public class Speed {
-    private static final int MIN_SPEED = 0; // speed is measured in km/h
-    private static final int MAX_SPEED = 170;
-    private int actualSpeed;
+import java.util.ArrayList;
+import java.util.List;
 
+@Getter
+
+public class Speed {
+    private  List<Integer> speed; // speed is measured in km/h
+
+    public Speed(List<Integer> speed) {
+        this.speed = new ArrayList<>();
+    }
 }

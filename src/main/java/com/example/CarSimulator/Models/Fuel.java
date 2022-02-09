@@ -1,14 +1,34 @@
 package com.example.CarSimulator.Models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
-@AllArgsConstructor
 public class Fuel {
-    private static final int FULL_TANK = 50; // fuel measured in liter
+    private int tank; // fuel measured in liter
     private int actualAmountOfFuel;
+    private final int consumption; // consumption per 100 km
+
+    public Fuel(int actualAmountOfFuel) {
+        this.tank = 50;
+        this.actualAmountOfFuel = actualAmountOfFuel;
+        this.consumption = 6;
+    }
+
+    public int getTank() {
+        return tank;
+    }
+
+    public int getActualAmountOfFuel() {
+        return actualAmountOfFuel;
+    }
+
+    public int getConsumption() {
+        return consumption;
+    }
+
+    public void setTank(int tank) {
+        this.tank = tank;
+    }
+
+    public void setActualAmountOfFuel(int actualAmountOfFuel) {
+        this.actualAmountOfFuel = actualAmountOfFuel;
+    }
 
 }
