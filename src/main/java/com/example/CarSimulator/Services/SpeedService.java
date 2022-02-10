@@ -1,4 +1,4 @@
-package com.example.CarSimulator.Helper;
+package com.example.CarSimulator.Services;
 
 import com.example.CarSimulator.Models.Speed;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Random;
 
 @Service
-public class RandomGenerator {
+public class SpeedService {
 
     @Autowired
     private Speed speed;
