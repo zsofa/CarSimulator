@@ -35,10 +35,17 @@ public class FuelService {
     }
 
     public int getFuelLevel() {
-        int actual = fuel.getTank() - getRoundConsumption();
-        fuel.setTank(actual);
+
+        if (fuel.getTank() != 0) {
+            int actual = fuel.getTank() - getRoundConsumption();
+            fuel.setTank(actual);
+        } else {
+            fuel.setTank(50);
+        }
         return fuel.getTank();
     }
+
+
 
 
 
